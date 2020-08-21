@@ -1,0 +1,27 @@
+{
+  "name": "js-constructor",
+  "version": "1.0.0",
+  "description": "pure javascript site constructor",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stigsanek/js-constructor.git"
+  },
+  "keywords": [],
+  "author": "Aleksandr Egorov <stigsanek@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stigsanek/js-constructor/issues"
+  },
+  "homepage": "https://github.com/stigsanek/js-constructor#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
