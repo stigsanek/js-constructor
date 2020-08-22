@@ -1,34 +1,22 @@
 import image from './assets/baner.jpg';
+import { TitleBlock, ImageBlock, TextBlock, TextColumnsBlock } from './classes/blocks';
 
 const loremText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dolorum quas tenetur. Deleniti omnis velit officia fugit ex nulla unde!`;
 
 export const model = [
-  {
-    type: 'title', value: 'Конструктор сайтов на чистом JavaScript!', options: {
-      tag: 'h2',
-      styles: 'background: linear-gradient(to right, #ff0099, #493240);color: #fff;padding: 1.5rem;text-align: center;'
-    }
-  },
-  {
-    type: 'image', value: image, options: {
-      styles: '',
-      alt: 'my image',
-      imageStyles: 'width: 100%;'
-    }
-  },
-  {
-    type: 'textColumns', value: [
-      loremText,
-      loremText,
-      loremText
-    ],
-    options: {
-      styles: 'padding: 2rem 0; color: #fff;background: linear-gradient(to bottom, #8e2de2, #4a00e0);font-weight: bold;'
-    }
-  },
-  {
-    type: 'text', value: `${loremText} ${loremText}`, options: {
-      styles: 'background: linear-gradient(to left, #f2994a, #f2c94c);font-weight: bold;padding: 1rem;'
-    }
-  }
+  new TitleBlock('Конструктор сайтов на чистом JavaScript!', {
+    tag: 'h2',
+    styles: 'background: linear-gradient(to right, #ff0099, #493240);color: #fff;padding: 1.5rem;text-align: center;'
+  }),
+  new ImageBlock(image, {
+    styles: '',
+    alt: 'my image',
+    imageStyles: 'width: 100%;'
+  }),
+  new TextColumnsBlock([loremText, loremText, loremText], {
+    styles: 'padding: 2rem 0; color: #fff;background: linear-gradient(to bottom, #8e2de2, #4a00e0);font-weight: bold;'
+  }),
+  new TextBlock(`${loremText} ${loremText}`, {
+    styles: 'background: linear-gradient(to left, #f2994a, #f2c94c);font-weight: bold;padding: 1rem;'
+  })
 ];
