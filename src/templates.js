@@ -11,7 +11,7 @@ function title(block) {
 
 function text(block) {
   return row(
-    col(`<p>${block.value}</p>`),
+    col(`<p style="margin: 0;">${block.value}</p>`),
     block.options.styles
   );
 };
