@@ -1,3 +1,5 @@
+import image from './assets/baner.jpg';
+
 const loremText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dolorum quas tenetur. Deleniti omnis velit officia fugit ex nulla unde!`;
 
 export const model = [
@@ -5,6 +7,13 @@ export const model = [
     type: 'title', value: 'Конструктор сайтов на чистом JavaScript!', options: {
       tag: 'h2',
       styles: 'background: linear-gradient(to right, #ff0099, #493240);color: #fff;padding: 1.5rem;text-align: center;'
+    }
+  },
+  {
+    type: 'image', value: image, options: {
+      styles: '',
+      alt: 'my image',
+      imageStyles: 'width: 100%;'
     }
   },
   {

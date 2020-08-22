@@ -23,10 +23,22 @@ function textColumns(block) {
     html.join(''),
     block.options.styles
   );
-}
+};
+
+function image(block) {
+  const { value, options: { alt, styles, imageStyles } } = block;
+
+  const html = `<img src="${value}" alt="${alt}" style="${imageStyles}">`;
+
+  return row(
+    `<div>${html}</div>`,
+    styles
+  );
+};
 
 export const templates = {
   title,
   text,
-  textColumns
+  textColumns,
+  image
 };
