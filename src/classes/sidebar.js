@@ -29,16 +29,16 @@ export class Sidebar {
 
   get template() {
     return [
-      getBlock('title'),
-      getBlock('text')
+      getBlock('title', 'Header'),
+      getBlock('text', 'Text')
     ].join('');
   }
 };
 
-function getBlock(type) {
+function getBlock(type, title) {
   return `
     <form name="${type}">
-      <h5>${type}</h5>
+      <h5>${title}</h5>
       <div class="form-group">
         <input class="form-control form-control-sm" type="text" name="value" placeholder="value">
       </div>
